@@ -1,0 +1,42 @@
+-- INSTALAR O JAVA 11 PELO TERMINAL
+
+sudo apt install openjdk-11-jdk
+
+Abra o arquivo bashrc com o xed
+sudo xed .bashrc
+
+Inclua na última linha:
+JAVA_HOME=”substitua pelo caminho que foi mostrado pelo comando 
+update-alternatives”
+
+Exemplo:
+JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+
+============================================================================
+
+-- INSTALAR FONTES DA MICROSOFT
+sudo apt install ttf-mscorefonts-installer
+
+============================================================================
+
+-- INSTALAR O C# (DOTNET)
+download do arquivo no site: https://www.microsoft.com/net/
+descompacte com o comando: tar -zxvf  nome do arquivo terminado em .tar.gz
+copiar o conteudo na pasta dotnet no home (pasta de usuário)
+adicionar o caminho: PATH=$PATH:$HOME/dotnet no arquivo bashrc:
+sudo xed .bashrc 
+depois escrever na última linha:
+PATH=$PATH:$HOME/dotnet
+Salve o arquivo e depois no terminal digite: 
+dotnet –version
+
+============================================================================
+
+-- Alterar horário do Ubuntu/Mint em dual boot para não prejudicar o windows
+timedatectl set-local-rtc 1 --adjust-system-clock
+timedatectl
+
+
+
+
+
